@@ -7,12 +7,10 @@ public class FizzBuzz {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a positive integer: ");
         int number = sc.nextInt();
-
         if (number <= 0) {
             System.out.println("Error: Please enter a positive integer.");
             return;
         }
-
         String[] result = new String[number + 1];
 
         for (int i = 1; i <= number; i++) {
