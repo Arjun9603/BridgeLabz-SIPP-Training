@@ -1,4 +1,4 @@
-package Java_Methods;
+package Java_Methods.Level1;
 
 public class SpringSeason {
 
