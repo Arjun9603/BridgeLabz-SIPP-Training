@@ -1,4 +1,4 @@
-package Arrays_Practices.Level1.JavaMethods.Level1;
+package JavaMethods.Level1;
 
 
 import java.util.Scanner;
