@@ -21,9 +21,9 @@ public class BMI {
             } else if (bmi >= 18.5 && bmi < 24.9) {
                 status[i] = "Normal weight";
             } else if (bmi >= 25 && bmi < 29.9) {
-                status[i] = "Overweight";
+                status[i] = "Overweight Range";
             } else {
-                status[i] = "Obese";
+                status[i] = "Obese Range";
             }
         }
         return status;
