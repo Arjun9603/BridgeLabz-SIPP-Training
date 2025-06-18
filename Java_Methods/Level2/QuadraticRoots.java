@@ -15,7 +15,7 @@ public class QuadraticRoots {
             double root = -b / (2 * a);
             return new double[]{root};
         } else {
-            return new double[]{}; // No real roots
+            return new double[]{};
         }
     }
 
