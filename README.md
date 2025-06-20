@@ -54,7 +54,7 @@ Practice using Java’s built-in `Date`, `Time`, and `Calendar` classes.
 ## 🛠 Technologies Used
 
 - Java SE (Standard Edition)
-- VS Code / IntelliJ IDEA
+- VS Code / IntelliJ IDEA/Eclipse/Notepad++
 - Git & GitHub for version control
 
 ---
