@@ -11,7 +11,6 @@ public class DateComparison {
 
         System.out.print("Enter second date (yyyy-MM-dd): ");
         LocalDate date2 = LocalDate.parse(scanner.nextLine());
-
         if (date1.isBefore(date2)) {
             System.out.println("The first date is before the second date.");
         } else if (date1.isAfter(date2)) {
