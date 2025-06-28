@@ -1,4 +1,4 @@
-package ParkingLotSimulation;
+
 
  public class ArraySum {
   static int M = 6;
