@@ -11,7 +11,8 @@ abstract class LibraryItem {
     private String itemID;
     private String title;
     private String author;
-
+    // Encapsulation: Item details are private
+    // This ensures that item details are not directly accessible from outside the class.   
     // Borrower details (secured via encapsulation)
     private String borrowerName;
     private String borrowerContact;
