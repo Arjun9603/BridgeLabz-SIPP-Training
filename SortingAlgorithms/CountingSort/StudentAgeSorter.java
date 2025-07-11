@@ -4,6 +4,7 @@ public class StudentAgeSorter {
 
     public static void main(String[] args) {
         int[] ages = {15, 12, 18, 10, 14, 12, 13, 17, 11, 10};
+        
 
         System.out.println("Original Student Ages:");
         printArray(ages);
@@ -13,8 +14,6 @@ public class StudentAgeSorter {
         System.out.println("\nSorted Student Ages (Ascending):");
         printArray(ages);
     }
-
-
     public static void countingSort(int[] arr, int min, int max) {
         int range = max - min + 1;
         int[] count = new int[range];
