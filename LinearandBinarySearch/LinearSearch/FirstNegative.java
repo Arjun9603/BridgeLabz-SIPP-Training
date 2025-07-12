@@ -1,4 +1,4 @@
-package LinearandBinarySearch;
+package LinearandBinarySearch.LinearSearch;
 
 public class FirstNegative {
     public static int findFirstNegative(int[] arr) {
