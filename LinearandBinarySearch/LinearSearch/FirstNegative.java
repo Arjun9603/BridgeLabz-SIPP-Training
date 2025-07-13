@@ -11,10 +11,10 @@ public class FirstNegative {
     }
 
     public static void main(String[] args) {
-        int[] arr1 = {4, 7, -2, 9, -5, 3};
+        int[] arr1 = {-3,4, 7,8, -2, 9, -5, 3};
         
 
-        System.out.println(findFirstNegative(arr1)); // Output: 2
+        System.out.println(findFirstNegative(arr1)); 
         
     }
 }
