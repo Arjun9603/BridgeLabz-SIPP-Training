@@ -19,7 +19,7 @@ public class WordSearch {
             "Python is great for data science",
             "Learning to code is fun"
         };
-        String targetWord = "science";
+        String targetWord = "data";
 
         String result = searchWordInSentences(sentences, targetWord);
         System.out.println("Result: \n" + result);
