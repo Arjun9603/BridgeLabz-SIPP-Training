@@ -2,7 +2,7 @@ package LinearandBinarySearch.BinarySearch;
 import java.util.*;
 public class RotationPoint {
     public static void main(String[] args) {
-        int arr[]={2,3,4,1,7};
+        int arr[]={2,3,4,1,6,7};
         Arrays.sort(arr);
         int n=arr.length;
         int low=0;
@@ -22,7 +22,7 @@ public class RotationPoint {
             }
         }
     }
-        System.out.println(low + " is the rotation point.");
+        System.out.println(low + " is rotation point.");
 
 
     }
