@@ -1,5 +1,6 @@
 package LinearandBinarySearch.BinarySearch;
 
+import java.util.Arrays;
 
 public class FindPeakElement {
 
@@ -30,7 +31,8 @@ public class FindPeakElement {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 3, 20, 4, 1, 0};
+        int[] arr = {10, 3, 20, 4, 1, 2000};
+        Arrays.sort(arr);
         int peakIndex = findPeakElement(arr);
         System.out.println("Peak element found at index: " + peakIndex);
         System.out.println("Peak element value: " + arr[peakIndex]);
