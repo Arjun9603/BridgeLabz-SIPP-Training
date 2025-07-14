@@ -1,6 +1,5 @@
 package LinearandBinarySearch.BinarySearch;
 
-package LinearandBinarySearch.BinarySearch;
 
 public class Search2DMatrix {
 
