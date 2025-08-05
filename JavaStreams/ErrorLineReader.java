@@ -4,7 +4,7 @@ import java.io.*;
 
 public class ErrorLineReader {
     public static void main(String[] args) {
-        String filePath = "largefile.txt"; // Replace with your actual file path
+        String filePath = "largefile.txt"; 
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
