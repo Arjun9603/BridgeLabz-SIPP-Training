@@ -1,4 +1,5 @@
 package Lambda_Expressions;
+import java.util.*;
 interface Payment {
     void pay(double amount);
 }
@@ -20,5 +21,18 @@ class WalletPayment implements Payment {
 
 
 public class DigitalPaymentSystem {
-    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== Digital Payment System ===");
+        System.out.print("Enter amount to pay: ₹");
+        double amount = sc.nextDouble();
+
+        System.out.println("\nSelect Payment Method:");
+        System.out.println("1. UPI");
+        System.out.println("2. Credit Card");
+        System.out.println("3. Wallet");
+        System.out.print("Choice: ");
+        int choice = sc.nextInt();
+    }
 }
