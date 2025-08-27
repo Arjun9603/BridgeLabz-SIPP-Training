@@ -1,0 +1,21 @@
+Class Member
+    Attributes:
+        name
+        id
+        membershipDate
+        expiryDate
+    Constructor(name, id, membershipDate, expiryDate)
+        this.name = name
+        this.id = id
+        this.membershipDate = membershipDate
+        this.expiryDate = expiryDate
+
+    Method checkMembershipValidity(currentDate)
+        If currentDate <= expiryDate
+            Print "Membership is valid"
+        Else
+            Print "Membership has expired"
+
+Main
+    Create Member("Arjun", 101, "2024-09-01", "2025-09-01")
+    Call member.checkMembershipValidity("2025-08-27")
