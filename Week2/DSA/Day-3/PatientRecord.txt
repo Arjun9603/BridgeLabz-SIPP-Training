@@ -1,0 +1,69 @@
+// Class representing a Patient
+class Patient {
+    String id;         // Unique patient ID
+    String name;
+    int age;
+    String diagnosis;
+    
+    void printDetails() {
+        print("ID: " + id);
+        print("Name: " + name);
+        print("Age: " + age);
+        print("Diagnosis: " + diagnosis);
+    }
+}
+
+// Main class that uses HashMap
+class PatientManager {
+    HashMap<String, Patient> patientRecords = new HashMap<>();
+
+    // Add a new patient
+    void addPatient(Patient p) {
+        patientRecords.put(p.id, p);
+        print("Patient added: " + p.id);
+    }
+
+    // Retrieve a patient by ID
+    Patient getPatient(String id) {
+        return patientRecords.get(id);
+    }
+
+    // Update patient's diagnosis
+    void updateDiagnosis(String id, String newDiagnosis) {
+        Patient p = patientRecords.get(id);
+        if (p != null) {
+            p.diagnosis = newDiagnosis;
+            print("Diagnosis updated for ID: " + id);
+        } else {
+            print("Patient not found.");
+        }
+    }
+
+    // Delete a patient
+    void deletePatient(String id) {
+        if (patientRecords.containsKey(id)) {
+            patientRecords.remove(id);
+            print("Patient with ID " + id + " deleted.");
+        } else {
+            print("Patient not found.");
+        }
+    }
+}
+
+// Example usage
+class MainPatientHashing {
+    public static void main(String[] args) {
+        PatientManager manager = new PatientManager();
+
+        Patient p1 = new Patient();
+        p1.id = "P001";
+        p1.name = "Alice";
+        p1.age = 30;
+        p1.diagnosis = "Flu";
+
+        manager.addPatient(p1);
+        manager.getPatient("P001").printDetails();
+        manager.updateDiagnosis("P001", "Recovered");
+        manager.deletePatient("P001");
+    }
+}
