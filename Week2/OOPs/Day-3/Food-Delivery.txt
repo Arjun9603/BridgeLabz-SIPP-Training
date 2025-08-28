@@ -1,0 +1,50 @@
+class Customer {
+    String name;
+    String address;
+    String phoneNumber;
+}
+
+class Restaurant {
+    String name;
+    String location;
+    List<MenuItem> menuItems;
+}
+
+class DeliveryBoy {
+    String name;
+    String contactNumber;
+    String vehicleNumber;
+}
+
+class MenuItem {
+    String name;
+    double price;
+}
+
+class Order {
+    Customer customer;
+    Restaurant restaurant;
+    DeliveryBoy deliveryBoy;
+    List<MenuItem> itemsOrdered;
+    String orderStatus;
+
+    double calculateTotal() {
+        double total = 0;
+        for (MenuItem item : itemsOrdered) {
+            total += item.price;
+        }
+        return total;
+    }
+
+    void printOrderDetails() {
+        print("Customer: " + customer.name);
+        print("Restaurant: " + restaurant.name);
+        print("Delivery By: " + deliveryBoy.name);
+        print("Items Ordered:");
+        for (MenuItem item : itemsOrdered) {
+            print("- " + item.name + ": $" + item.price);
+        }
+        print("Total: $" + calculateTotal());
+        print("Status: " + orderStatus);
+    }
+}
