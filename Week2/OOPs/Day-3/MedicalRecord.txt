@@ -1,0 +1,75 @@
+interface Searchable {
+    boolean matches(String keyword);
+}
+
+interface Printable {
+    void printReport();
+}
+
+abstract class MedicalReport implements Searchable, Printable {
+    String patientName;
+    String date;
+}
+
+// Subclass: LabReport
+class LabReport extends MedicalReport {
+    String testName;
+    String result;
+
+    boolean matches(String keyword) {
+        return patientName.contains(keyword) || testName.contains(keyword);
+    }
+
+    void printReport() {
+        print("Lab Report for " + patientName);
+        print("Test: " + testName);
+        print("Result: " + result);
+        print("Date: " + date);
+    }
+}
+
+// Subclass: XRayReport
+class XRayReport extends MedicalReport {
+    String bodyPart;
+    String findings;
+
+    boolean matches(String keyword) {
+        return patientName.contains(keyword) || bodyPart.contains(keyword);
+    }
+
+    void printReport() {
+        print("X-Ray Report for " + patientName);
+        print("Body Part: " + bodyPart);
+        print("Findings: " + findings);
+        print("Date: " + date);
+    }
+}
+
+// Report Manager using Polymorphism
+class ReportManager {
+    List<MedicalReport> reports;
+
+    void searchReports(String keyword) {
+        for (MedicalReport report : reports) {
+            if (report.matches(keyword)) {
+                report.printReport();
+            }
+        }
+    }
+
+    void printAllReports() {
+        for (MedicalReport report : reports) {
+            report.printReport();
+        }
+    }
+}
+
+// ------------ MAIN METHOD (for simulation) ------------
+
+class Main {
+    public static void main(String[] args) {
+        // Simulate creating and using both systems here
+        // For brevity, this part is left as a placeholder
+        print("Simulation of Food Delivery and Medical Record Systems...");
+    }
+}
