@@ -1,0 +1,47 @@
+Class Course
+    Attributes:
+        title
+        duration
+        price
+    Methods:
+        getDetails():
+            Print title + " - " + duration + " - ₹" + price
+
+Class Student
+    Attributes:
+        name
+        email
+        enrolledCourses (List of Course)
+    Methods:
+        enrollCourse(course):
+            If course NOT in enrolledCourses:
+                Add course to enrolledCourses
+                Print name + " successfully enrolled in " + course.title
+            Else:
+                Print "Already enrolled in " + course.title
+
+        viewEnrolledCourses():
+            Print name + "'s Enrolled Courses:"
+            For each course in enrolledCourses:
+                course.getDetails()
+
+Main Program:
+    // Step 1: EduPrime adds courses
+    course1 = new Course("Java Programming Basics", "6 weeks", 4999)
+    course2 = new Course("Data Structures in Java", "8 weeks", 5999)
+    course3 = new Course("Spring Boot for Web Development", "10 weeks", 6999)
+
+    // Step 2: Student Amit joins
+    student1 = new Student("Amit", "amit@gmail.com")
+    student1.enrollCourse(course1)
+    student1.enrollCourse(course2)
+
+    // Step 3: Student Priya joins
+    student2 = new Student("Priya", "priya@gmail.com")
+    student2.enrollCourse(course3)
+    student2.enrollCourse(course1)
+
+    // Step 4: View enrolled courses
+    student1.viewEnrolledCourses()
+    student2.viewEnrolledCourses()
+
