@@ -1,0 +1,38 @@
+Class Room
+    Attributes:
+        roomNumber
+        customerName
+        daysStayed
+    Methods:
+        calculateBill():
+            Return 0  // overridden in subclasses
+        printInvoice():
+            Print "Room Type: " + room type
+            Print "Customer: " + customerName
+            Print "Nights Stayed: " + daysStayed
+            Print "Total Bill: ₹" + calculateBill()
+
+Class DeluxeRoom extends Room
+    Attributes:
+        ratePerNight = 3000
+    Methods:
+        calculateBill():
+            Return daysStayed * ratePerNight
+
+Class SuiteRoom extends Room
+    Attributes:
+        ratePerNight = 5000
+    Methods:
+        calculateBill():
+            Return daysStayed * ratePerNight
+
+Main Program:
+    // Step 1: Ravi books Deluxe for 3 nights
+    room1 = new DeluxeRoom(101, "Ravi", 3)
+    room1.printInvoice()
+
+    // Step 2: Anita books Suite for 2 nights
+    room2 = new SuiteRoom(202, "Anita", 2)
+    room2.printInvoice()
+
+    
