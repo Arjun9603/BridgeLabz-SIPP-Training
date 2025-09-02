@@ -1,0 +1,39 @@
+Generic Class Transaction<T>
+    Attribute:
+        paymentObject (type T)
+
+    Constructor(paymentObject):
+        this.paymentObject = paymentObject
+
+    Method processPayment():
+        // Payment logic varies depending on T
+        IF paymentObject is UPI:
+            PRINT "Payment of ₹" + paymentObject.amount + " via UPI successful for " + paymentObject.merchantName
+        ELSE IF paymentObject is Card:
+            PRINT "Payment of ₹" + paymentObject.amount + " via Card ending " + last 4 digits of cardNumber + " successful for " + paymentObject.merchantName
+        ELSE IF paymentObject is NetBanking:
+            PRINT "Payment of ₹" + paymentObject.amount + " via NetBanking (" + paymentObject.bankName + ") successful."
+
+Class UPI
+    Attributes: upiId, amount, merchantName
+
+Class Card
+    Attributes: cardNumber, cvv, expiryDate, amount, merchantName
+
+Class NetBanking
+    Attributes: bankName, accountNumber, amount
+
+Main Program:
+    t1 = new Transaction(new UPI("ramesh@upi", 1200, "Amazon"))
+    t2 = new Transaction(new Card("1234-5678-9876-5432", "123", "12/27", 5000, "MakeMyTrip"))
+    t3 = new Transaction(new NetBanking("HDFC", "00112233", 8000))
+
+    PRINT "Processing Payment..."
+    t1.processPayment()
+
+    PRINT "Processing Payment..."
+    t2.processPayment()
+
+    PRINT "Processing Payment..."
+    t3.processPayment()
+
