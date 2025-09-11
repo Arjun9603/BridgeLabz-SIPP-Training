@@ -1,5 +1,0 @@
-{
-  "name": "Alice Sharma",
-  "age": 22,
-  "phone": "+919876543210"
-}
